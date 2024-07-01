@@ -1,0 +1,49 @@
+package task4;
+
+import java.util.Scanner;
+
+public class currencyCoverter {
+	public static void main(String args[]) {
+		Scanner sc=new Scanner(System.in);
+		int choice;
+		System.out.println("                      CURRENCY CONVERTOR");
+		System.out.println();
+		System.out.println("1.USD to Rupee");
+		System.out.println("2.Rupee to USD");
+		System.out.println("3.Rupee to Euro");
+		System.out.println("4.Euro to Rupee");
+		System.out.println();
+		System.out.println("enter your choice:");
+		choice=sc.nextInt();
+		switch(choice) {
+		case 1:
+			System.out.println("Enter the USD amount to convert it in Rupee :");
+			double USD=sc.nextDouble();
+			double Rupee=USD*83.47;
+			System.out.println("The converted amount is:"+Rupee);
+			break;
+			
+		case 2:
+			System.out.println("Enter the Rupee amount to convert it in USD:");
+			double rupee=sc.nextDouble();
+			double usd=rupee*0.0119804;
+			System.out.println("The converted amount is:"+usd);
+		    break;
+		    
+		case 3:
+			System.out.println("Enter the Rupee to convert it in Euro:");
+			double r=sc.nextDouble();
+			double e=r*0.0113;
+			System.out.println("The converted amount is:"+e);
+			break;
+			
+		case 4:
+			System.out.println("Enter the Euro to convert it in Rupee:");
+			double euro=sc.nextDouble();
+			double ru=euro*89.10;
+			System.out.println("The converted amount is:"+ru);
+		}
+		sc.close();
+	}
+
+}
