@@ -1,0 +1,65 @@
+package atm_interface;
+
+public interface ATM {
+    void viewBalance();
+    void withdraw(double amount);
+    void deposit(double amount);
+    }
+
+public class ATM1 implements ATM {
+	private double balance;
+	public  ATM1(double initialBalance) {
+       this.balance=initialBalance;      		
+	}
+    public void viewBalance() {
+    	System.out.println("Current balance:$"+balance);
+    	System.out.println();
+    	
+    }
+    public void withdraw(double amount) {
+    	if(amount>balance) {
+    		System.out.println("Insufficient amount");
+    		System.out.println();
+    	}else {
+    		balance=balance-amount;
+    		System.out.println("Withdrawn:$"+amount);
+    		System.out.println("New balance:$"+balance);
+    		System.out.println();
+    	}
+    }
+    public void deposit(double amount) {
+    	balance=balance+amount;
+    	System.out.println("New balance:$"+balance);
+    	System.out.println();
+    }
+}
+
+
+
+public class ATM1 implements ATM {
+	private double balance;
+	public  ATM1(double initialBalance) {
+       this.balance=initialBalance;      		
+	}
+    public void viewBalance() {
+    	System.out.println("Current balance:$"+balance);
+    	System.out.println();
+    	
+    }
+    public void withdraw(double amount) {
+    	if(amount>balance) {
+    		System.out.println("Insufficient amount");
+    		System.out.println();
+    	}else {
+    		balance=balance-amount;
+    		System.out.println("Withdrawn:$"+amount);
+    		System.out.println("New balance:$"+balance);
+    		System.out.println();
+    	}
+    }
+    public void deposit(double amount) {
+    	balance=balance+amount;
+    	System.out.println("New balance:$"+balance);
+    	System.out.println();
+    }
+}
